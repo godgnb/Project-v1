@@ -3,12 +3,8 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>YNG에 오신 여러분을 환영합니다.</title>
-<link href="../css/reset5.css" rel="stylesheet" type="text/css">
-<link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css">
-<link href="../css/style.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<%-- commen_head 영역 --%>
+	<jsp:include page="../include/common_head.jsp" />
 <script>
 // 사용자 입력값 확인
 function check() {
@@ -78,7 +74,7 @@ function check() {
 			<div class="clear"></div>
 			<div id="buttons">
 			<input type="submit" value="회원가입" class="submit">
-			<input name="" type="button" value="Cancel" class="cancel">
+			<input name="" type="button" value="Cancel" class="cancel" onclick="location.href='login.jsp';" >
 			</div>
 			
 			</form> 
@@ -94,18 +90,8 @@ function check() {
 
 	</div>
 
-
-	<script type="text/javascript"
-		src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript" src="../scripts/jquery.fancybox.pack.js"></script>
-	<script type="text/javascript" src="../scripts/prettify.packed.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".fancybox").fancybox({
-				openEffect : 'none',
-				closeEffect : 'none'
-			});
-		});
-	</script>
+	<%-- common_script 영역 --%>
+	<jsp:include page="../include/common_script.jsp" />
+	
 </body>
 </html>

@@ -3,12 +3,8 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>YNG에 오신 여러분을 환영합니다.</title>
-    <link href="../css/reset5.css" rel="stylesheet" type="text/css">
-    <link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css"> 
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+	<%-- commen_head 영역 --%>
+	<jsp:include page="../include/common_head.jsp" />
 </head>
 <body>
 	<div id="wrap">
@@ -49,17 +45,8 @@ Ut bibendum aliquet lectus id dictum. Vestibulum lectus metus, aliquet sed iacul
 
 	</div>
 
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script type="text/javascript" src="../scripts/jquery.fancybox.pack.js"></script>
-    <script type="text/javascript" src="../scripts/prettify.packed.js"></script>
-  	<script type="text/javascript">
-  		$(document).ready(function() {
-			$(".fancybox").fancybox({
-				openEffect	: 'none',
-				closeEffect	: 'none'
-			});
-		});
-  	</script>
+	<%-- common_script 영역 --%>
+	<jsp:include page="../include/common_script.jsp" />
+	
 </body>
 </html>

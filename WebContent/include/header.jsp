@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <header>
 	<div id="logo">
-		<a href="./">YNG Corp.</a>
+		<a href="../main/main.jsp">YNG Corp.</a>
 	</div>
 	<div id="hlink">
 		<ul>
