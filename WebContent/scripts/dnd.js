@@ -60,4 +60,4 @@ dropbox.src = evt.target.result;
 
 
 reader.readAsDataURL(file)
-}(false)
+}
