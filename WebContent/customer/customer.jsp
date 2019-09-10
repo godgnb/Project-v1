@@ -3,8 +3,8 @@
 <!doctype html>
 <html>
 <head>
-	<%-- commen_head 영역 --%>
-	<jsp:include page="../include/common_head.jsp" />
+<%-- commen_head 영역 --%>
+<jsp:include page="../include/common_head.jsp" />
 </head>
 <body>
 	<div id="wrap">
@@ -112,16 +112,8 @@
         <div class="btn"><a href="#">문의하기</a></div>
     		</article>
 
-
-  		<aside>
-  			<h3><div>고객지원센터</div></h3>
-  			<ul>
-  				<li><a href="#">고객상담게시판</a></li>
-  				<li><a href="#">공지사항</a></li>
-  				<li><a href="#">새로운 뉴스 </a></li>
-  			</ul>
-  		</aside>
-
+<%-- aside 영역 --%>
+<jsp:include page="../include/aside_customer.jsp" />
 
         <div class="clear"></div>
         
@@ -130,8 +122,8 @@
 
 	</div>
 
-	<%-- common_script 영역 --%>
-	<jsp:include page="../include/common_script.jsp" />
+<%-- common_script 영역 --%>
+<jsp:include page="../include/common_script.jsp" />
 	
 </body>
 </html>

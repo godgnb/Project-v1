@@ -3,14 +3,14 @@
 <!doctype html>
 <html>
 <head>
-	<%-- commen_head 영역 --%>
-	<jsp:include page="../include/common_head.jsp" />
+<%-- commen_head 영역 --%>
+<jsp:include page="../include/common_head.jsp" />
 </head>
 <body>
 	<div id="wrap">
 
-		<%-- header 영역 --%>
-		<jsp:include page="../include/header.jsp" />
+<%-- header 영역 --%>
+<jsp:include page="../include/header.jsp" />
 
 		<h1 id="customer">
 			<div>MEMBERSHIP</div>
@@ -33,19 +33,19 @@
 			</form>
 		</article>
 
-		<%-- aside 영역 --%>
-		<jsp:include page="../include/aside_member.jsp" />
+<%-- aside 영역 --%>
+<jsp:include page="../include/aside_member.jsp" />
 
 
 		<div class="clear"></div>
 
-		<%-- footer 영역 --%>
-		<jsp:include page="../include/footer.jsp" />
+<%-- footer 영역 --%>
+<jsp:include page="../include/footer.jsp" />
 
 	</div>
 
-	<%-- common_script 영역 --%>
-	<jsp:include page="../include/common_script.jsp" />
+<%-- common_script 영역 --%>
+<jsp:include page="../include/common_script.jsp" />
 	
 </body>
 </html>

@@ -3,8 +3,8 @@
 <!doctype html>
 <html>
 <head>
-	<%-- commen_head 영역 --%>
-	<jsp:include page="../include/common_head.jsp" />
+<%-- commen_head 영역 --%>
+<jsp:include page="../include/common_head.jsp" />
 </head>
 <body>
 	<div id="wrap">
@@ -27,16 +27,8 @@ Ut bibendum aliquet lectus id dictum. Vestibulum lectus metus, aliquet sed iacul
   		</article>
 		
 		
-  		<aside>
-  			<h3><div>회사소개</div></h3>
-  			<ul>
-  				<li><a href="#">ceo 인사말</a></li>
-  				<li><a href="#">회사연혁</a></li>
-  				<li><a href="#">회사비전</a></li>
-  				<li><a href="#">찾아오시는길</a></li>
-  			</ul>
-  		</aside>
-
+<%-- aside 영역 --%>
+<jsp:include page="../include/aside_company.jsp" />
 
         <div class="clear"></div>
         
@@ -45,8 +37,8 @@ Ut bibendum aliquet lectus id dictum. Vestibulum lectus metus, aliquet sed iacul
 
 	</div>
 
-	<%-- common_script 영역 --%>
-	<jsp:include page="../include/common_script.jsp" />
+<%-- common_script 영역 --%>
+<jsp:include page="../include/common_script.jsp" />
 	
 </body>
 </html>

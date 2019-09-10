@@ -3,8 +3,8 @@
 <!doctype html>
 <html>
 <head>
-	<%-- commen_head 영역 --%>
-	<jsp:include page="../include/common_head.jsp" />
+<%-- commen_head 영역 --%>
+<jsp:include page="../include/common_head.jsp" />
 </head>
 <body>
 	<div id="wrap">
@@ -27,16 +27,8 @@
   		</article>
 		
 		
-  		<aside>
-  			<h3><div>커뮤니티</div></h3>
-  			<ul>
-  				<li><a href="#">포토캘러리</a></li>
-  				<li><a href="#">제품토론장</a></li>
-  				<li><a href="#">자유게시판 </a></li>
-  				<li><a href="#">유저사용기 </a></li>
-  			</ul>
-  		</aside>
-
+<%-- aside 영역 --%>
+<jsp:include page="../include/aside_community.jsp" />
 
 <script type="text/javascript"> 
 	var dropbox = document.getElementById('imgBG'); 
@@ -102,8 +94,8 @@
 
 </div>
 
-	<%-- common_script 영역 --%>
-	<jsp:include page="../include/common_script.jsp" />
+<%-- common_script 영역 --%>
+<jsp:include page="../include/common_script.jsp" />
 	
 </body>
 </html>
