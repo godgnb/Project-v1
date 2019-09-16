@@ -1,10 +1,10 @@
-package com.exam.dao;
+package com.pro.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.exam.vo.MemberVO;
+import com.pro.vo.MemberVO;
 
 public class MemberDao {
 	
