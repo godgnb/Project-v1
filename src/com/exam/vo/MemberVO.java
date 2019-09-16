@@ -1,4 +1,4 @@
-package com.pro.vo;
+package com.exam.vo;
 
 import java.sql.Timestamp;
 

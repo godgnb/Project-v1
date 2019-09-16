@@ -1,4 +1,4 @@
-<%@page import="com.pro.dao.MemberDao"%>
+<%@page import="com.exam.dao.MemberDao"%>
 <%@page import="java.sql.Timestamp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -7,7 +7,7 @@
 <% request.setCharacterEncoding("utf-8"); %>
 
 <%-- MemberVO 자바빈 객체 생성 --%>
-<jsp:useBean id="memberVO" class="com.pro.vo.MemberVO" />
+<jsp:useBean id="memberVO" class="com.exam.vo.MemberVO" />
 
 <%-- 자바빈 객체에 파라미터값 찾아서 저장하기 --%>
 <jsp:setProperty property="*" name="memberVO"/>
