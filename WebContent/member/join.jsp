@@ -1,4 +1,4 @@
-<%@page import="com.exam.dao.MemberDao"%>
+<%@page import="com.pro.dao.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!doctype html>
