@@ -11,8 +11,8 @@ public class DBManager {
 	public static Connection getConnection() throws Exception {
 		// DB 접속정보
 		String url = "jdbc:oracle:thin:@localhost:1521:XE";
-		String user = "scott";
-		String password = "tiger";
+		String user = "admin";
+		String password = "admin";
 
 		Connection con = null;
 		// 1단계: DB 드라이버 로딩

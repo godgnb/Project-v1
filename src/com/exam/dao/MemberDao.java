@@ -2,6 +2,7 @@ package com.exam.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.exam.vo.MemberVO;
 
@@ -25,7 +26,7 @@ public class MemberDao {
 		
 		try {
 			con = DBManager.getConnection();
-			String sql = "INSERT INTO project(id, passwd, name, email, address, tel, mtel, reg_date)";
+			String sql = "INSERT INTO member(id, passwd, name, email, address, tel, mtel, reg_date)";
 			sql += " VALUES(?,?,?,?,?,?,?,?)";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, vo.getId());

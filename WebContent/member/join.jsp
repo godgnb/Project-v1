@@ -1,3 +1,4 @@
+<%@page import="com.exam.dao.MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!doctype html>
@@ -5,6 +6,7 @@
 <head>
 <%-- commen_head 영역 --%>
 <jsp:include page="../include/common_head.jsp" />
+
 <script>
 // 사용자 입력값 확인
 function check() {
@@ -28,18 +30,23 @@ function check() {
 		frm.email.focus();
 		return false;
 	}
-	if (frm.passwd.value != frm.passwd2.value) {
-		alert('패스워드가 동일하지 않습니다.');
-		frm.passwd.focus();
+	
+	var passwd = document.getElementById('passwd').value;
+	var passwd2 = document.getElementById('passwd2').value;
+	
+	if (passwd != passwd2) {
+		document.getElementById('same').innerHTML='패스워드가 동일하지 않습니다.'
+		document.getElementById('same').style.color='red';
 		return false;
+	} else {
+		document.getElementById('same').innerHTML=''
 	}
-	if (frm.email.value != frm.email2.value) {
-		alert('이메일이 동일하지 않습니다.');
-		frm.email.focus();
-		return false;
-	}
+// 	if (frm.passwd.value != frm.passwd2.value) {
+// 		alert('패스워드가 동일하지 않습니다.');
+// 		frm.passwd.focus();
+// 		return false;
+// 	}
 }
-
 </script>
 </head>
 <body>
@@ -56,12 +63,12 @@ function check() {
 			<form name="frm" id="join" action="joinProcess.jsp" method="post" onsubmit="return check();">    
 			<fieldset>
 				<legend>Basic Information</legend>
-					<label>User ID</label> <input name="id" type="text" class="id" id="id"> <input type="button" value="ID 중복확인" class="dup" onclick=""><br>
-					<label>Password</label> <input name="passwd" type="password" class="pass"><br>
-					<label>Retype Password</label> <input name="passwd2" type="password" class="pass"><br>
+					<label>User ID</label> <input name="id" type="text" class="id" id="id">
+					<input type="button" value="ID 중복확인" class="dup" onclick="idCheck();"><br>
+					<label>Password</label> <input name="passwd" type="password" class="pass" id="passwd" ><br>
+					<label>Retype Password</label> <input name="passwd2" type="password" class="pass" id="passwd2" >&nbsp;&nbsp;<span id="same"></span><br>
 					<label>Name</label> <input name="name" type="text" class="nick"><br>
-					<label>E-Mail</label> <input name="email" type="email" class="email" ><br>
-					<label>Retype E-mail</label> <input name="email2" type="email" class="email"><br>
+					<label>E-Mail</label> <input name="email" type="email" class="email" ><br>				
 			</fieldset>
 			
 			<fieldset>
@@ -73,7 +80,7 @@ function check() {
 			
 			<div class="clear"></div>
 			<div id="buttons">
-			<input type="submit" value="회원가입" class="submit">
+			<input type="submit" value="회원가입" class="submit" >
 			<input name="" type="button" value="Cancel" class="cancel" onclick="location.href='login.jsp';" >
 			</div>
 			
