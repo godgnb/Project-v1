@@ -48,4 +48,34 @@ public class MemberDao {
 	} // insertMember
 	
 	
+	public boolean idDupCheck(String id) {
+		boolean result = false;
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "";
+		
+		try {
+			con = DBManager.getConnection();
+			sql = "SELECT COUNT(*) FROM member WHERE id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			rs.next();
+			
+			if (rs.getInt(1) != 0) { // 아이디가 있다
+				result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		
+		return result;
+	} // idDupCheck
+	
 } // MemberDao class

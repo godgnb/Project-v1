@@ -47,6 +47,16 @@ function check() {
 // 		return false;
 // 	}
 }
+function idCheck() {
+	var inputId = document.frm.id.value;
+	
+	if (frm.id.value.length == 0) {
+		alert('아이디를 입력하세요.');
+		frm.id.focus();
+		return;
+	}
+	window.open('idDupCheck.jsp?userId=' + inputId, '', 'width=300,height=100,left=700,top=400')
+}
 </script>
 </head>
 <body>
