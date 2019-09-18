@@ -1,8 +1,6 @@
 package com.pro.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 import com.pro.vo.MemberVO;
 
@@ -77,5 +75,71 @@ public class MemberDao {
 		
 		return result;
 	} // idDupCheck
+	
+	
+	public int userCheck(String id, String passwd) {
+		int result = 0;
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "";
+		
+		try {
+			con = DBManager.getConnection();
+			sql = "SELECT * FROM member WHERE id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) { // 아이디 있음
+				
+				if (passwd.equals(rs.getString("passwd"))) { // 패스워드 일치
+					result = 1;
+				} else { // 패스워드 불일치
+					result = 0;
+				}
+			} else { // 아이디 없음
+				result = -1;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		return result;
+	} // userCheck
+	
+	
+	public MemberVO getMember(String id) {
+		MemberVO memberVO = new MemberVO();
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "";
+		
+		try {
+			con = DBManager.getConnection();
+			sql = "SELECT * FROM member WHERE id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				memberVO.setId(rs.getString("id"));
+				memberVO.setPasswd(rs.getString("passwd"));
+				memberVO.setName(rs.getString("name"));
+				memberVO.setEmail(rs.getString("email"));			
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			DBManager.close(con, pstmt, rs);
+		}
+		return memberVO;
+	} // getMember
 	
 } // MemberDao class

@@ -17,7 +17,7 @@
 		</h1>
 		<article>
 			<h2>로그인</h2>
-			<form action="" method="post" id="join">
+			<form action="loginProcess.jsp" method="post" id="join">
 				<fieldset>
 					<legend>Login Infomation</legend>
 					<label>User ID</label> <input type="text" name="id"><br>
